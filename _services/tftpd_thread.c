@@ -464,6 +464,8 @@ char  szExtendedName [2 * _MAX_PATH];
 		if (Ark>=TFTP_SEGSIZE || tp->th_stuff[Ark]!=0)
 			break;
 
+        Ark++;
+
         LOG (12, "Option <%s>: value <%s>", p, pValue);
 
         if (!sSettings.bPXECompatibility && IS_OPT (p, TFTP_OPT_BLKSIZE))
